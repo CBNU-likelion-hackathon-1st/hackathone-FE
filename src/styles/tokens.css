@@ -1,0 +1,37 @@
+:root {
+  /* brand */
+  --color-primary: #ffd966;
+  --color-primary-strong: #7a6300;
+  --color-secondary: #795548;
+  --color-tertiary: #ff9800;
+  --color-pink: #fdcdbc;
+  --color-pink-soft: #fdeee8;
+  --color-red-soft: #fbdede;
+
+  /* surfaces */
+  --color-bg: #fffbf0;
+  --color-surface: #ffffff;
+  --color-surface-alt: #fef8ea;
+  --color-input-bg: #f1eee3;
+
+  /* text */
+  --color-text: #2b2116;
+  --color-text-muted: #8a7f6d;
+  --color-text-soft: #b3a892;
+  --color-text-on-dark: #fff8e6;
+
+  /* borders / shadow */
+  --color-border: #efe3c4;
+  --shadow-card: 0 10px 24px rgba(122, 99, 0, 0.08);
+  --shadow-soft: 0 4px 10px rgba(122, 99, 0, 0.06);
+
+  /* radii */
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+
+  /* fonts */
+  --font-heading: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+  --font-body: 'Be Vietnam Pro', 'Noto Sans KR', sans-serif;
+}
