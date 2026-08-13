@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   Award,
   BarChart3,
@@ -9,8 +10,8 @@ import {
   Share2,
   User,
 } from 'lucide-react';
-import TopBar from '../components/TopBar';
-import BottomNav from '../components/BottomNav';
+import TopBar from './TopBar';
+import BottomNav from './BottomNav';
 import character from '../assets/character.png';
 import './ResultPage.css';
 
@@ -20,17 +21,18 @@ const STATS = [
   { label: '티키타카 유지력', value: 88 },
 ];
 
-type ResultPageProps = {
-  onHome: () => void;
-  onRematch: () => void;
-};
+function ResultPage() {
+  const navigate = useNavigate();
 
-function ResultPage({ onHome, onRematch }: ResultPageProps) {
   return (
     <div className="screen result-screen">
       <TopBar
         left={
-          <button className="icon-btn" onClick={onHome} aria-label="홈으로">
+          <button
+            className="icon-btn"
+            onClick={() => navigate('/main')}
+            aria-label="홈으로"
+          >
             <House size={18} />
           </button>
         }
@@ -89,7 +91,11 @@ function ResultPage({ onHome, onRematch }: ResultPageProps) {
           </div>
         </div>
 
-        <button className="rematch-btn" type="button" onClick={onRematch}>
+        <button
+          className="rematch-btn"
+          type="button"
+          onClick={() => navigate('/game')}
+        >
           <RotateCcw size={18} /> 다시 겨루기
         </button>
         <button className="share-btn" type="button">

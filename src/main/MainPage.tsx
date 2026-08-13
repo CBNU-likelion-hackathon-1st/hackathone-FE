@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Briefcase,
   ChevronRight,
@@ -12,10 +13,10 @@ import {
   Smile,
   User,
 } from 'lucide-react';
-import TopBar from '../components/TopBar';
-import BottomNav from '../components/BottomNav';
+import TopBar from './TopBar';
+import BottomNav from './BottomNav';
 import character from '../assets/character.png';
-import './HomePage.css';
+import './MainPage.css';
 
 type Opponent = {
   icon: ReactNode;
@@ -46,11 +47,9 @@ const wideOpponent: Opponent = {
   tags: ['#킹받음', '#팩폭격'],
 };
 
-type HomePageProps = {
-  onStart: () => void;
-};
+function MainPage() {
+  const navigate = useNavigate();
 
-function HomePage({ onStart }: HomePageProps) {
   return (
     <div className="screen home-screen">
       <TopBar
@@ -101,7 +100,11 @@ function HomePage({ onStart }: HomePageProps) {
           <ChevronRight size={18} className="cta-chevron" />
         </button>
 
-        <button className="start-btn" type="button" onClick={onStart}>
+        <button
+          className="start-btn"
+          type="button"
+          onClick={() => navigate('/game')}
+        >
           <Gamepad2 size={20} />
           게임 시작하기
         </button>
@@ -144,4 +147,4 @@ function OpponentCard({
   );
 }
 
-export default HomePage;
+export default MainPage;

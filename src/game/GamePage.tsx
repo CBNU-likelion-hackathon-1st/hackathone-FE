@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
   MoreVertical,
@@ -14,11 +15,8 @@ const MODES = ['말싸움 모드', '끝말잇기', '밸런스 게임'];
 
 const QUICK_REPLIES = ['너나 잘해 🤬', '어이없네 👋', '반박불가 🤐', '킹받네 🐔'];
 
-type GamePageProps = {
-  onBack: () => void;
-};
-
-function GamePage({ onBack }: GamePageProps) {
+function GamePage() {
+  const navigate = useNavigate();
   const [activeMode, setActiveMode] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [draft, setDraft] = useState('');
@@ -26,7 +24,11 @@ function GamePage({ onBack }: GamePageProps) {
   return (
     <div className="screen game-screen">
       <header className="game-topbar">
-        <button className="icon-btn" onClick={onBack} aria-label="뒤로가기">
+        <button
+          className="icon-btn"
+          onClick={() => navigate('/main')}
+          aria-label="뒤로가기"
+        >
           <ArrowLeft size={18} />
         </button>
         <div className="game-topbar-info">

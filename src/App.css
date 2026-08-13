@@ -8,30 +8,6 @@
   padding: 24px 12px;
 }
 
-.preview-switcher {
-  display: flex;
-  gap: 6px;
-  padding: 4px;
-  background: rgba(43, 33, 22, 0.06);
-  border-radius: var(--radius-pill);
-}
-
-.preview-switcher button {
-  border: none;
-  background: transparent;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  transition: background 0.2s, color 0.2s;
-}
-
-.preview-switcher button.active {
-  background: var(--color-text);
-  color: var(--color-text-on-dark);
-}
-
 .device-frame {
   width: 414px;
   max-width: 100%;
