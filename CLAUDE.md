@@ -10,3 +10,13 @@
 
 각 화면(main, game, result)은 그 각각의 브랜치(feature/main, feature/game, feature/result)에서 작업한다.
 나중에 병합할 때 충돌이 나지 않아야 하므로, src 내 폴더(src/main, src/game, src/result)를 생성하여 작업한다.
+
+# 개발 자료
+
+## 깃허브 이슈
+
+전체적 이슈: https://github.com/CBNU-likelion-hackathon-1st/hackathone-FE/issues/1
+메인 화면 이슈: https://github.com/CBNU-likelion-hackathon-1st/hackathone-FE/issues/2
+게임 화면 이슈: https://github.com/CBNU-likelion-hackathon-1st/hackathone-FE/issues/3
+결과 화면 이슈: https://github.com/CBNU-likelion-hackathon-1st/hackathone-FE/issues/4
+백엔드 명세서: https://app.notion.com/p/api-3bb19e9eadb98025a33be4db554bfe0e
