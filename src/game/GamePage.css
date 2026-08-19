@@ -52,6 +52,18 @@
   flex-shrink: 0;
 }
 
+.round-indicator {
+  align-self: flex-start;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-primary-strong);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
 .win-rate-labels {
   display: flex;
   justify-content: space-between;
@@ -122,6 +134,11 @@
   background: var(--color-primary-strong);
   border-color: var(--color-primary-strong);
   color: var(--color-text-on-dark);
+}
+
+.mode-tab:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .chat-area {
@@ -268,6 +285,70 @@
   font-size: 11px;
   font-weight: 700;
   color: var(--color-text-soft);
+}
+
+.attack-option:disabled {
+  opacity: 0.6;
+}
+
+.turn-hint {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary-strong);
+  background: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.error-banner {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b3261e;
+  background: var(--color-red-soft);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.balance-hint {
+  flex: 1;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.game-loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 24px;
+}
+
+.game-loading-sub {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--color-text-soft);
+  max-width: 260px;
+}
+
+.game-retry-btn {
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-primary-strong);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
 }
 
 .quick-replies {

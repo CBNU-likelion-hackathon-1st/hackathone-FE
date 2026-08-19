@@ -13,6 +13,7 @@ function App() {
             <Route path="/" element={<Navigate to="/main" replace />} />
             <Route path="/main" element={<MainPage />} />
             <Route path="/game" element={<GamePage />} />
+            <Route path="/game/:gameId" element={<GamePage />} />
             <Route path="/result" element={<ResultPage />} />
           </Routes>
         </div>
