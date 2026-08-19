@@ -48,6 +48,47 @@
   font-weight: 700;
 }
 
+.opponent-error {
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-alt);
+  padding: 9px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+.game-mode-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-mode-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.game-mode-btn {
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  padding: 10px 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.game-mode-btn.selected {
+  background: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+  color: var(--color-text-on-dark);
+}
+
 .opponent-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,6 +96,7 @@
 }
 
 .opponent-card {
+  width: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -63,6 +105,7 @@
   flex-direction: column;
   gap: 10px;
   text-align: left;
+  color: var(--color-text);
 }
 
 .opponent-card.wide {
@@ -70,6 +113,12 @@
   flex-direction: row;
   align-items: center;
   gap: 14px;
+}
+
+.opponent-card.selected {
+  border-color: var(--color-primary-strong);
+  background: var(--color-primary);
+  box-shadow: var(--shadow-soft);
 }
 
 .opponent-icon {
@@ -187,4 +236,21 @@
   font-size: 15.5px;
   font-weight: 800;
   font-family: var(--font-heading);
+}
+
+.start-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.start-error {
+  width: 100%;
+  margin-top: -6px;
+  border-radius: var(--radius-sm);
+  background: var(--color-red-soft);
+  padding: 10px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #c2453f;
 }
