@@ -138,7 +138,7 @@ function GamePage() {
     setEnded(true);
     try {
       const result = await getGameResult(id);
-      navigate('/result', { state: { result } });
+      navigate(`/result/${id}`, { state: { result } });
     } catch (err) {
       setError(err instanceof ApiError ? err.message : '결과를 불러오지 못했습니다.');
     }
