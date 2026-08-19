@@ -22,6 +22,16 @@
   border-radius: var(--radius-pill);
 }
 
+.winner-badge.loser {
+  background: var(--color-pink-soft);
+  color: #b6543a;
+}
+
+.winner-badge.draw {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+}
+
 .result-heading {
   font-size: 22px;
   font-weight: 800;
@@ -158,6 +168,41 @@
   font-weight: 600;
   font-style: italic;
   line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.result-reason {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.result-state-card {
+  width: 100%;
+  min-height: 260px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  color: var(--color-primary-strong);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.result-state-card.error {
+  color: #b6543a;
 }
 
 .rematch-btn {
