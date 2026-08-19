@@ -7,8 +7,10 @@ import type {
 } from './types';
 
 const BASE_URL =
-  (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/$/, '') ||
-  'https://ddangkongi-api.onrender.com';
+  import.meta.env.DEV
+    ? ''
+    : (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/$/, '') ||
+      'https://ddangkongi-api.onrender.com';
 
 export class ApiError extends Error {
   status: number;
