@@ -22,10 +22,7 @@ type ApiErrorBody = {
 };
 
 const API_BASE_URL =
-  import.meta.env.DEV
-    ? ''
-    : (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/$/, '') ||
-      'https://ddangkongi-api.onrender.com';
+  (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/$/, '') ?? '';
 
 export class ResultApiError extends Error {
   status: number;
